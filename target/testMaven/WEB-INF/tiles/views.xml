@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+"-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+"http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+<definition name="AddEmployee" extends="DefaultTemplate">
+  <put-attribute name="title" value="Welcome" />  
+    <put-attribute name="body" value="/WEB-INF/views/AddEmployee.jsp" />
+</definition>
+<definition name="helloWorld" extends="DefaultTemplate">
+<put-attribute name="title" value="Welcome" />  
+    <put-attribute name="body" value="/WEB-INF/views/helloWorld.jsp" />
+        
+</definition>
+<definition name="Employee1To1" extends="DefaultTemplate">
+<put-attribute name="title" value="Welcome" />  
+    <put-attribute name="body" value="/WEB-INF/views/Employee1To1.jsp" />
+        
+</definition>
+<definition name="employeesListDisplay" extends="DefaultTemplate">
+<put-attribute name="title" value="Welcome" />  
+    <put-attribute name="body" value="/WEB-INF/views/employeesListDisplay.jsp" />
+        
+</definition>
+
+</tiles-definitions>

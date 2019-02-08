@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+<appender name="consoleAppender"
+      class="org.apache.log4j.ConsoleAppender">
+      <param name="Threshold" value="ALL" />
+      <layout class="org.apache.log4j.PatternLayout">
+         <param name="ConversionPattern" value="%d{yyyy-MM-dd HH:mm:ss} %-5p %c{1}:%L - %m%n" />
+      </layout>
+   </appender>
+
+   <appender name="fileAppender"
+           class="org.apache.log4j.RollingFileAppender">
+       <param name="immediateFlush" value="true" />
+      <param name="Threshold" value="ALL" />
+      <param name="File" value="C:/Users/SPPSSystems/Desktop/check2.html"/>
+      <layout class="org.apache.log4j.HTMLLayout">
+      <param name="Title" value="Bhalu Log Tracking" />
+      <param name="LocationInfo" value="true" />
+         <!--  <param name="ConversionPattern" value="%d{yyyy-MM-dd HH:mm:ss} %-5p %c{1}:%L - %m%n" />-->
+      </layout>
+   </appender>
+
+
+   <root> 
+    <priority value ="all" /> 
+    <appender-ref ref="consoleAppender" /> 
+    <appender-ref ref="fileAppender" /> 
+  </root>
+
+</log4j:configuration>
