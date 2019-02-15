@@ -1,1 +1,4 @@
 https://o7planning.org/en/11223/generate-tables-from-entity-classes-in-hibernate
+
+
+If our generator class is assigned, then there is no difference between save() and persist() 

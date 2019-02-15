@@ -23,6 +23,8 @@ import com.SampleServlet1.model.EmployeeVO;
 import com.SampleServlet1.model.EmployeeVO2;
 import com.SampleServlet1.model.EmployeeVO_Login;
 import com.SampleServlet1.model.EmployeeVO_Login2;
+import com.SampleServlet1.model.Husband;
+import com.SampleServlet1.model.Wife;
 import com.SampleServlet1.service.EmployeeManager;
 
 @Controller
@@ -160,7 +162,7 @@ public class EmployeeController {
 		
 		employeeVO.setFirstName("Hello");
 		employeeVO.setLastName("checking");
-		employeeVO.setEmail("check@gmail.com");
+		employeeVO.setEmail("Take@gmail.com");
 		employeeVO.getEmployeeLogin().setFirstName(employeeVO.getFirstName());
 		employeeVO.getEmployeeLogin().setPassword(employeeVO.getFirstName());
 		employeeVO.getEmployeeLogin().setRole(employeeVO.getFirstName());
@@ -190,6 +192,21 @@ public class EmployeeController {
 		
 		dept.setDeptName("IT");
 		manager.addDepartment(dept);
+		return "helloWorld";
+	}
+	@RequestMapping("/create1To1Withprimary")
+	public String addWifeAndHusband()
+	{
+		Husband hus=new Husband();
+		hus.setHusbandName("Helll0");
+		Wife w=new Wife();
+		w.setWifeName("Hai");
+		
+		manager.addHusband(hus);
+		w.setId(hus.getId());
+		w.setHusband(hus);
+        manager.addWife(w);
+    
 		return "helloWorld";
 	}
 	

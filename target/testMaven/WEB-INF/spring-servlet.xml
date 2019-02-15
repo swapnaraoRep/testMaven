@@ -66,6 +66,8 @@
 				<beans:value>com.SampleServlet1.model.Person</beans:value>
 				<beans:value>com.SampleServlet1.model.Employee</beans:value>
 				<beans:value>com.SampleServlet1.model.Department</beans:value>
+				<beans:value>com.SampleServlet1.model.Wife</beans:value>
+				<beans:value>com.SampleServlet1.model.Husband</beans:value>
 			</beans:list>
 		</beans:property>
 		<beans:property name="hibernateProperties">

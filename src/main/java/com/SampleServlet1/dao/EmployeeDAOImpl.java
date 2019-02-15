@@ -13,6 +13,8 @@ import com.SampleServlet1.model.Department;
 import com.SampleServlet1.model.Employee;
 import com.SampleServlet1.model.EmployeeVO;
 import com.SampleServlet1.model.EmployeeVO2;
+import com.SampleServlet1.model.Husband;
+import com.SampleServlet1.model.Wife;
 
 
 
@@ -79,6 +81,18 @@ public class EmployeeDAOImpl implements EmployeeDAO {
 	public void addDepartment(Department dept) {
 		Session session = this.sessionFactory.getCurrentSession();
 		session.persist(dept);
+		
+	}
+	@Override
+	public void addHusband(Husband hus) {
+		Session session = this.sessionFactory.getCurrentSession();
+		session.save(hus);
+		
+	}
+	@Override
+	public void addWife(Wife wife) {
+		Session session = this.sessionFactory.getCurrentSession();
+		session.save(wife);
 		
 	}
 }

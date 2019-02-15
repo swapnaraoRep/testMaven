@@ -10,6 +10,8 @@ import com.SampleServlet1.model.Department;
 import com.SampleServlet1.model.Employee;
 import com.SampleServlet1.model.EmployeeVO;
 import com.SampleServlet1.model.EmployeeVO2;
+import com.SampleServlet1.model.Husband;
+import com.SampleServlet1.model.Wife;
 
 @Service
 public class EmployeeManagerImpl implements EmployeeManager {
@@ -59,6 +61,18 @@ public class EmployeeManagerImpl implements EmployeeManager {
 	public void addDepartment(Department dept) {
 		// TODO Auto-generated method stub
 		dao.addDepartment(dept);
+		
+	}
+
+	@Transactional
+	public void addHusband(Husband hus) {
+		dao.addHusband(hus);
+		
+	}
+
+	@Transactional
+	public void addWife(Wife wife) {
+		dao.addWife(wife);
 		
 	}
 }
